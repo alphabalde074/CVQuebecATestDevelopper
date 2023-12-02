@@ -13,6 +13,7 @@ public class JobController : ControllerBase
     public async Task<ActionResult<IEnumerable<JobModel>>> GetJobs(string projectId)
     {
         var task = Task.Run(() => jobService.GetJobs("ProjectId", projectId));
+        int a = 0;
         return await task;
     }
 
